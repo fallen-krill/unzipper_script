@@ -1,5 +1,10 @@
 #!/bin/zsh
 
+if ! [ -d $1 ]; then
+    echo "That's not a valid path"
+    exit
+fi
+
 #check if same directory
 if ! [[ $1 == "" ]]; then 
     cd "$1" #change directory to passed argument
